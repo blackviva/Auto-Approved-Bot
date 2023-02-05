@@ -42,7 +42,7 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 @pr0fess0r_99.on_message(filters.private & filters.command(["start"]))
 async def start(client: pr0fess0r_99, message: Message):
     approvedbot = await client.get_me() 
-    button = [[ InlineKeyboardButton("Instagram ", url="https://Instagram/denathyon"), InlineKeyboardButton("Updates 📢", url="t.me/IrisMoviesMain") ],
+    button = [[ InlineKeyboardButton("Instagram ", url="https://Instagram/denathyon"), InlineKeyboardButton("Updates 📢", url="https://t.me/IrisMoviesMain") ],
               [ InlineKeyboardButton("➕️ Add Me To Your Chat ➕️", url=f"http://t.me/{approvedbot.username}?startgroup=botstart") ]]
     await client.send_message(chat_id=message.chat.id, text=f"**__Hello {message.from_user.mention} I am Auto Approver Join Request Bot || Developer - OBE||**__", reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview=True)
 
